@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import { WeightEntriesService } from './weight-entries.service';
+
 
 @Component({
-  selector: 'app-root',
+  selector: 'hm-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng2-fundamentals';
+
+  constructor(public entriesSvc: WeightEntriesService) {}
+
+  ngOnInit() {
+  }
+
 }
